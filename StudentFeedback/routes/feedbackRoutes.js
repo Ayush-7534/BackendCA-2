@@ -46,7 +46,7 @@ router.get("/", async (req, res) => {
 
         if (page < 1 || limit < 1) {
             return res.status(400).json({
-                message: "Page and limit must be positive numbers"
+                message: "Page and limit should positive numbers"
             });
         }
 
@@ -97,7 +97,7 @@ router.patch("/:id", async (req, res) => {
         }
 
         res.status(200).json({
-            message: "Feedback status updated successfully",
+            message: "Feedback updated successfully",
             feedback
         });
 
